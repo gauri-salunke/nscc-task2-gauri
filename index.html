@@ -5,12 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gauri Salunke | Personal Intro</title>
 <style>
-:root{--bg:#ffffff;--text:#1a1a1a;--card:#f5f5f5;--accent:#6c5ce7}
+:root{--bg:#fff;--text:#1a1a1a;--card:#f5f5f5;--accent:#6c5ce7}
 [data-theme="dark"]{--bg:#1a1a2e;--text:#eee;--card:#16213e;--accent:#a29bfe}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-body{background:var(--bg);color:var(--text);transition:0.3s;line-height:1.6}
-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}
-.toggle{cursor:pointer;background:var(--card);border:2px solid var(--accent);color:var(--text);padding:0.5rem 1rem;border-radius:20px}
+body{background:var(--bg);color:var(--text);transition:.3s;line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:var(--card)}
+nav h2{color:var(--accent)}
+.toggle{cursor:pointer;background:var(--accent);color:#fff;border:none;padding:.5rem 1rem;border-radius:20px}
 .hero{max-width:800px;margin:2rem auto;padding:2rem;text-align:center}
-.avatar{width:120px;height:120px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:3rem;color:white;margin:0 auto 1rem}
-.card{background:var(--card);padding:1.5rem;border-radius:12px;margin:1
+.avatar{width:120px;height:120px;border-radius:50%;background:var(--accent);color:#fff;font-size:3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.card{background:var(--card);padding:1.5rem;border-radius:12px;margin:1rem 0;text-align:left}
+.card h3{color:var(--accent);margin-bottom:.5rem}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.skill{background:var(--accent);color:#fff;padding:.3rem .8rem;border-radius:15px;font-size:.9rem}
+a{color:var(--accent)}
+footer{text-align:center;padding:2rem;color:#888}
+</style>
+</head>
+<body>
+<nav><h2>GS</h2><button class="toggle" onclick="toggleTheme()">🌙 Dark Mode</button></nav>
+<div class="hero">
+<div class="avatar">G</div>
+<h1>Hi, I'm Gauri Salunke 👋</h1>
+<p>First-year B.Tech student passionate about technology and web development.</p>
+<div class="card"><h3>About Me</h3><p>I'm learning HTML, CSS, and JavaScript through NSCC. I love building beautiful websites and exploring new tech. Currently focused on frontend development and problem solving.</p></div>
+<div class="card"><h3>Skills</h3><div class="skills"><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">Python</span><span class="skill">Git & GitHub</span></div></div>
+<div class="card"><h3>Goals</h3><p>🎯 Master full-stack web development<br>🎯 Contribute to open source<br>🎯 Build 10+ projects this year</p></div>
+<div class="card"><h3>Contact</h3><p>📧 Email: gauri@example.com<br>💼 GitHub: <a href="https://github.com/gauri-salunke">gauri-salunke</a></p></div>
+</div>
+<footer><p>Made with ❤️ by Gauri | NSCC Task 2</p></footer>
+<script>
+function toggleTheme(){const b=document.body;const cur=b.getAttribute('data-theme');b.setAttribute('data-theme',cur==='dark'?'':'dark');document.querySelector('.toggle').textContent=cur==='dark'?'🌙 Dark Mode':'☀️ Light Mode'}
+</script>
+</body>
+</html>
